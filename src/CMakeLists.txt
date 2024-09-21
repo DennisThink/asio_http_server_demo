@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.5)
+project(asio_http_server_demo)
+set(CMAKE_CXX_STANDARD 17)
+add_definitions(-DASIO_STANDALONE)
+include_directories(./inc/asio/)
+include_directories(./include/)
+
+add_executable(http_demo ./examples/http_examples.cpp)
+add_executable(http_server ./server/http_server.cpp)
+add_executable(http_client ./server/http_client.cpp)
